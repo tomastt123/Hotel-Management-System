@@ -1,0 +1,4 @@
+C:\Users\Tomas\source\repos\Hotelmanagementsystemv2\Hotelmanagementsystemv2\x64\Debug\Hotelmanagementsystemv2.vcxproj.AssemblyReference.cache
+C:\Users\Tomas\source\repos\Hotelmanagementsystemv2\Hotelmanagementsystemv2\x64\Debug\Hotelmanagementsystemv2.MyForm.resources
+C:\Users\Tomas\source\repos\Hotelmanagementsystemv2\Hotelmanagementsystemv2\x64\Debug\Hotelmanagementsystemv2.vcxproj.GenerateResource.cache
+C:\Users\Tomas\source\repos\Hotelmanagementsystemv2\Hotelmanagementsystemv2\x64\Debug\Hotelmanagementsystemv2.vcxproj.CopyComplete
