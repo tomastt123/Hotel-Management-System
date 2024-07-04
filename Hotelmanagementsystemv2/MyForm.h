@@ -31,6 +31,9 @@ namespace Hotelmanagementsystemv2 {
 
 		Double iTax;
 	private: System::Windows::Forms::Timer^ timer1;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+
+
 
 		   Double Total;
 
@@ -68,23 +71,16 @@ namespace Hotelmanagementsystemv2 {
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::TextBox^ CustomerID;
+	private: System::Windows::Forms::TextBox^ txtCustomerID;
+
 
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::TextBox^ Firstname;
-	private: System::Windows::Forms::TextBox^ Surname;
-	private: System::Windows::Forms::TextBox^ Address;
-	private: System::Windows::Forms::TextBox^ Postcode;
-	private: System::Windows::Forms::TextBox^ Mobile;
-	private: System::Windows::Forms::TextBox^ Email;
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::TextBox^ txtFirstname;
+	private: System::Windows::Forms::TextBox^ txtSurname;
+	private: System::Windows::Forms::TextBox^ txtAddress;
+	private: System::Windows::Forms::TextBox^ txtPostcode;
+	private: System::Windows::Forms::TextBox^ txtMobile;
+	private: System::Windows::Forms::TextBox^ txtEmail;
 
 
 	private: System::Windows::Forms::Label^ label2;
@@ -98,26 +94,29 @@ namespace Hotelmanagementsystemv2 {
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::TextBox^ txtSearch;
+	private: System::Windows::Forms::TextBox^ txtTotal;
 
 
-	private: System::Windows::Forms::TextBox^ textBox10;
-	private: System::Windows::Forms::TextBox^ textBox9;
-	private: System::Windows::Forms::TextBox^ textBox8;
+
+	private: System::Windows::Forms::TextBox^ txtSubtotal;
+
+	private: System::Windows::Forms::TextBox^ txtTax;
+
 	private: System::Windows::Forms::Label^ label19;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
-	private: System::Windows::Forms::ComboBox^ Nationality;
-	private: System::Windows::Forms::ComboBox^ Gender;
+private: System::Windows::Forms::ComboBox^ cobNationality;
+private: System::Windows::Forms::ComboBox^ cobGender;
 
 
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker2;
 	private: System::Windows::Forms::DateTimePicker^ dateTimePicker3;
-	private: System::Windows::Forms::ComboBox^ TypeofID;
-private: System::Windows::Forms::ComboBox^ Meal;
-private: System::Windows::Forms::ComboBox^ Roomty;
-private: System::Windows::Forms::ComboBox^ Roomno;
+private: System::Windows::Forms::ComboBox^ cobProve;
+
+private: System::Windows::Forms::ComboBox^ cobMeal;
+private: System::Windows::Forms::ComboBox^ cobRoomty;
+private: System::Windows::Forms::ComboBox^ cobRoomno;
 
 
 
@@ -127,7 +126,10 @@ private: System::Windows::Forms::ComboBox^ Roomno;
 	private: System::Windows::Forms::Label^ label15;
 	private: System::Windows::Forms::Label^ label16;
 	private: System::Windows::Forms::Label^ label21;
-	private: System::Windows::Forms::TextBox^ textBox12;
+private: System::Windows::Forms::TextBox^ txtNoOFdays;
+
+
+
 
 	private: System::Windows::Forms::Label^ lblTime;
 
@@ -139,8 +141,6 @@ private: System::Windows::Forms::Label^ lblDate;
 
 
 	private: System::ComponentModel::IContainer^ components;
-
-
 
 
 
@@ -165,11 +165,11 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->lblTime = (gcnew System::Windows::Forms::Label());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->label21 = (gcnew System::Windows::Forms::Label());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
+			this->txtNoOFdays = (gcnew System::Windows::Forms::TextBox());
 			this->txtSearch = (gcnew System::Windows::Forms::TextBox());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+			this->txtTotal = (gcnew System::Windows::Forms::TextBox());
+			this->txtSubtotal = (gcnew System::Windows::Forms::TextBox());
+			this->txtTax = (gcnew System::Windows::Forms::TextBox());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
 			this->label17 = (gcnew System::Windows::Forms::Label());
@@ -178,14 +178,14 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->CustomerID = (gcnew System::Windows::Forms::TextBox());
+			this->txtCustomerID = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->Firstname = (gcnew System::Windows::Forms::TextBox());
-			this->Surname = (gcnew System::Windows::Forms::TextBox());
-			this->Address = (gcnew System::Windows::Forms::TextBox());
-			this->Postcode = (gcnew System::Windows::Forms::TextBox());
-			this->Mobile = (gcnew System::Windows::Forms::TextBox());
-			this->Email = (gcnew System::Windows::Forms::TextBox());
+			this->txtFirstname = (gcnew System::Windows::Forms::TextBox());
+			this->txtSurname = (gcnew System::Windows::Forms::TextBox());
+			this->txtAddress = (gcnew System::Windows::Forms::TextBox());
+			this->txtPostcode = (gcnew System::Windows::Forms::TextBox());
+			this->txtMobile = (gcnew System::Windows::Forms::TextBox());
+			this->txtEmail = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -197,20 +197,20 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->Nationality = (gcnew System::Windows::Forms::ComboBox());
-			this->Gender = (gcnew System::Windows::Forms::ComboBox());
+			this->cobNationality = (gcnew System::Windows::Forms::ComboBox());
+			this->cobGender = (gcnew System::Windows::Forms::ComboBox());
 			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->dateTimePicker3 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->TypeofID = (gcnew System::Windows::Forms::ComboBox());
-			this->Meal = (gcnew System::Windows::Forms::ComboBox());
-			this->Roomty = (gcnew System::Windows::Forms::ComboBox());
-			this->Roomno = (gcnew System::Windows::Forms::ComboBox());
+			this->cobProve = (gcnew System::Windows::Forms::ComboBox());
+			this->cobMeal = (gcnew System::Windows::Forms::ComboBox());
+			this->cobRoomty = (gcnew System::Windows::Forms::ComboBox());
+			this->cobRoomno = (gcnew System::Windows::Forms::ComboBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
@@ -222,6 +222,8 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->Size = System::Drawing::Size(962, 606);
 			this->dataGridView1->TabIndex = 0;
+			this->dataGridView1->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellClick);
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dataGridView1_CellContentClick);
 			// 
 			// button1
 			// 
@@ -240,11 +242,11 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->panel1->Controls->Add(this->lblTime);
 			this->panel1->Controls->Add(this->button7);
 			this->panel1->Controls->Add(this->label21);
-			this->panel1->Controls->Add(this->textBox12);
+			this->panel1->Controls->Add(this->txtNoOFdays);
 			this->panel1->Controls->Add(this->txtSearch);
-			this->panel1->Controls->Add(this->textBox10);
-			this->panel1->Controls->Add(this->textBox9);
-			this->panel1->Controls->Add(this->textBox8);
+			this->panel1->Controls->Add(this->txtTotal);
+			this->panel1->Controls->Add(this->txtSubtotal);
+			this->panel1->Controls->Add(this->txtTax);
 			this->panel1->Controls->Add(this->label19);
 			this->panel1->Controls->Add(this->label18);
 			this->panel1->Controls->Add(this->label17);
@@ -305,12 +307,13 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->label21->TabIndex = 49;
 			this->label21->Text = L"No. of days";
 			// 
-			// textBox12
+			// txtNoOFdays
 			// 
-			this->textBox12->Location = System::Drawing::Point(421, 17);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(152, 20);
-			this->textBox12->TabIndex = 48;
+			this->txtNoOFdays->Location = System::Drawing::Point(421, 17);
+			this->txtNoOFdays->Name = L"txtNoOFdays";
+			this->txtNoOFdays->Size = System::Drawing::Size(152, 20);
+			this->txtNoOFdays->TabIndex = 48;
+			this->txtNoOFdays->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox12_TextChanged);
 			// 
 			// txtSearch
 			// 
@@ -321,26 +324,26 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->txtSearch->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox11_TextChanged);
 			this->txtSearch->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox11_KeyPress);
 			// 
-			// textBox10
+			// txtTotal
 			// 
-			this->textBox10->Location = System::Drawing::Point(107, 70);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(152, 20);
-			this->textBox10->TabIndex = 45;
+			this->txtTotal->Location = System::Drawing::Point(107, 70);
+			this->txtTotal->Name = L"txtTotal";
+			this->txtTotal->Size = System::Drawing::Size(152, 20);
+			this->txtTotal->TabIndex = 45;
 			// 
-			// textBox9
+			// txtSubtotal
 			// 
-			this->textBox9->Location = System::Drawing::Point(107, 44);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(152, 20);
-			this->textBox9->TabIndex = 44;
+			this->txtSubtotal->Location = System::Drawing::Point(107, 44);
+			this->txtSubtotal->Name = L"txtSubtotal";
+			this->txtSubtotal->Size = System::Drawing::Size(152, 20);
+			this->txtSubtotal->TabIndex = 44;
 			// 
-			// textBox8
+			// txtTax
 			// 
-			this->textBox8->Location = System::Drawing::Point(107, 17);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(152, 20);
-			this->textBox8->TabIndex = 39;
+			this->txtTax->Location = System::Drawing::Point(107, 17);
+			this->txtTax->Name = L"txtTax";
+			this->txtTax->Size = System::Drawing::Size(152, 20);
+			this->txtTax->TabIndex = 39;
 			// 
 			// label19
 			// 
@@ -425,12 +428,12 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
-			// CustomerID
+			// txtCustomerID
 			// 
-			this->CustomerID->Location = System::Drawing::Point(127, 15);
-			this->CustomerID->Name = L"CustomerID";
-			this->CustomerID->Size = System::Drawing::Size(175, 20);
-			this->CustomerID->TabIndex = 3;
+			this->txtCustomerID->Location = System::Drawing::Point(127, 15);
+			this->txtCustomerID->Name = L"txtCustomerID";
+			this->txtCustomerID->Size = System::Drawing::Size(175, 20);
+			this->txtCustomerID->TabIndex = 3;
 			// 
 			// label1
 			// 
@@ -443,47 +446,49 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"CustomerID";
 			// 
-			// Firstname
+			// txtFirstname
 			// 
-			this->Firstname->Location = System::Drawing::Point(127, 41);
-			this->Firstname->Name = L"Firstname";
-			this->Firstname->Size = System::Drawing::Size(175, 20);
-			this->Firstname->TabIndex = 5;
+			this->txtFirstname->Location = System::Drawing::Point(127, 41);
+			this->txtFirstname->Name = L"txtFirstname";
+			this->txtFirstname->Size = System::Drawing::Size(175, 20);
+			this->txtFirstname->TabIndex = 5;
+			this->txtFirstname->TextChanged += gcnew System::EventHandler(this, &MyForm::Firstname_TextChanged);
 			// 
-			// Surname
+			// txtSurname
 			// 
-			this->Surname->Location = System::Drawing::Point(127, 67);
-			this->Surname->Name = L"Surname";
-			this->Surname->Size = System::Drawing::Size(175, 20);
-			this->Surname->TabIndex = 6;
+			this->txtSurname->Location = System::Drawing::Point(127, 67);
+			this->txtSurname->Name = L"txtSurname";
+			this->txtSurname->Size = System::Drawing::Size(175, 20);
+			this->txtSurname->TabIndex = 6;
 			// 
-			// Address
+			// txtAddress
 			// 
-			this->Address->Location = System::Drawing::Point(127, 93);
-			this->Address->Name = L"Address";
-			this->Address->Size = System::Drawing::Size(175, 20);
-			this->Address->TabIndex = 7;
+			this->txtAddress->Location = System::Drawing::Point(127, 93);
+			this->txtAddress->Name = L"txtAddress";
+			this->txtAddress->Size = System::Drawing::Size(175, 20);
+			this->txtAddress->TabIndex = 7;
+			this->txtAddress->TextChanged += gcnew System::EventHandler(this, &MyForm::Address_TextChanged);
 			// 
-			// Postcode
+			// txtPostcode
 			// 
-			this->Postcode->Location = System::Drawing::Point(127, 119);
-			this->Postcode->Name = L"Postcode";
-			this->Postcode->Size = System::Drawing::Size(175, 20);
-			this->Postcode->TabIndex = 8;
+			this->txtPostcode->Location = System::Drawing::Point(127, 119);
+			this->txtPostcode->Name = L"txtPostcode";
+			this->txtPostcode->Size = System::Drawing::Size(175, 20);
+			this->txtPostcode->TabIndex = 8;
 			// 
-			// Mobile
+			// txtMobile
 			// 
-			this->Mobile->Location = System::Drawing::Point(127, 145);
-			this->Mobile->Name = L"Mobile";
-			this->Mobile->Size = System::Drawing::Size(175, 20);
-			this->Mobile->TabIndex = 9;
+			this->txtMobile->Location = System::Drawing::Point(127, 145);
+			this->txtMobile->Name = L"txtMobile";
+			this->txtMobile->Size = System::Drawing::Size(175, 20);
+			this->txtMobile->TabIndex = 9;
 			// 
-			// Email
+			// txtEmail
 			// 
-			this->Email->Location = System::Drawing::Point(127, 171);
-			this->Email->Name = L"Email";
-			this->Email->Size = System::Drawing::Size(175, 20);
-			this->Email->TabIndex = 10;
+			this->txtEmail->Location = System::Drawing::Point(127, 171);
+			this->txtEmail->Name = L"txtEmail";
+			this->txtEmail->Size = System::Drawing::Size(175, 20);
+			this->txtEmail->TabIndex = 10;
 			// 
 			// label2
 			// 
@@ -607,17 +612,10 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->label12->TabIndex = 25;
 			this->label12->Text = L"Date of birth";
 			// 
-			// dateTimePicker1
+			// cobNationality
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(127, 226);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(175, 20);
-			this->dateTimePicker1->TabIndex = 26;
-			// 
-			// Nationality
-			// 
-			this->Nationality->FormattingEnabled = true;
-			this->Nationality->Items->AddRange(gcnew cli::array< System::Object^  >(192) {
+			this->cobNationality->FormattingEnabled = true;
+			this->cobNationality->Items->AddRange(gcnew cli::array< System::Object^  >(192) {
 				L"Afghan", L"Albanian", L"Algerian", L"American",
 					L"Andorran", L"Angolan", L"Antiguan and Barbudan", L"Argentine", L"Armenian", L"Australian", L"Austrian", L"Azerbaijani", L"Bahamian",
 					L"Bahraini", L"Bangladeshi", L"Barbadian", L"Belarusian", L"Belgian", L"Belizean", L"Beninese", L"Bhutanese", L"Bolivian", L"Bosnian and Herzegovinian",
@@ -641,19 +639,19 @@ private: System::Windows::Forms::Label^ lblDate;
 					L"Turkmen", L"Tuvaluan", L"Ugandan", L"Ukrainian", L"Uruguayan", L"Uzbekistani", L"Vanuatuan", L"Venezuelan", L"Vietnamese",
 					L"Yemeni", L"Zambian", L"Zimbabwean"
 			});
-			this->Nationality->Location = System::Drawing::Point(127, 197);
-			this->Nationality->Name = L"Nationality";
-			this->Nationality->Size = System::Drawing::Size(175, 21);
-			this->Nationality->TabIndex = 27;
+			this->cobNationality->Location = System::Drawing::Point(127, 197);
+			this->cobNationality->Name = L"cobNationality";
+			this->cobNationality->Size = System::Drawing::Size(175, 21);
+			this->cobNationality->TabIndex = 27;
 			// 
-			// Gender
+			// cobGender
 			// 
-			this->Gender->FormattingEnabled = true;
-			this->Gender->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Male", L"Female" });
-			this->Gender->Location = System::Drawing::Point(127, 252);
-			this->Gender->Name = L"Gender";
-			this->Gender->Size = System::Drawing::Size(175, 21);
-			this->Gender->TabIndex = 28;
+			this->cobGender->FormattingEnabled = true;
+			this->cobGender->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Male", L"Female" });
+			this->cobGender->Location = System::Drawing::Point(127, 252);
+			this->cobGender->Name = L"cobGender";
+			this->cobGender->Size = System::Drawing::Size(175, 21);
+			this->cobGender->TabIndex = 28;
 			// 
 			// dateTimePicker2
 			// 
@@ -669,49 +667,50 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->dateTimePicker3->Size = System::Drawing::Size(175, 20);
 			this->dateTimePicker3->TabIndex = 30;
 			// 
-			// TypeofID
+			// cobProve
 			// 
-			this->TypeofID->FormattingEnabled = true;
-			this->TypeofID->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+			this->cobProve->FormattingEnabled = true;
+			this->cobProve->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
 				L"Student ID", L"Pilot license", L"Driving license",
 					L"Passport"
 			});
-			this->TypeofID->Location = System::Drawing::Point(127, 278);
-			this->TypeofID->Name = L"TypeofID";
-			this->TypeofID->Size = System::Drawing::Size(175, 21);
-			this->TypeofID->TabIndex = 31;
+			this->cobProve->Location = System::Drawing::Point(127, 278);
+			this->cobProve->Name = L"cobProve";
+			this->cobProve->Size = System::Drawing::Size(175, 21);
+			this->cobProve->TabIndex = 31;
 			// 
-			// Meal
+			// cobMeal
 			// 
-			this->Meal->FormattingEnabled = true;
-			this->Meal->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Breakfeast", L"Lunch", L"Dinner" });
-			this->Meal->Location = System::Drawing::Point(127, 358);
-			this->Meal->Name = L"Meal";
-			this->Meal->Size = System::Drawing::Size(175, 21);
-			this->Meal->TabIndex = 32;
+			this->cobMeal->FormattingEnabled = true;
+			this->cobMeal->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Breakfeast", L"Lunch", L"Dinner" });
+			this->cobMeal->Location = System::Drawing::Point(127, 358);
+			this->cobMeal->Name = L"cobMeal";
+			this->cobMeal->Size = System::Drawing::Size(175, 21);
+			this->cobMeal->TabIndex = 32;
+			this->cobMeal->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::txtMeal_SelectedIndexChanged);
 			// 
-			// Roomty
+			// cobRoomty
 			// 
-			this->Roomty->FormattingEnabled = true;
-			this->Roomty->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Single", L"Double", L"Family" });
-			this->Roomty->Location = System::Drawing::Point(127, 385);
-			this->Roomty->Name = L"Roomty";
-			this->Roomty->Size = System::Drawing::Size(175, 21);
-			this->Roomty->TabIndex = 33;
+			this->cobRoomty->FormattingEnabled = true;
+			this->cobRoomty->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Single", L"Double", L"Family" });
+			this->cobRoomty->Location = System::Drawing::Point(127, 385);
+			this->cobRoomty->Name = L"cobRoomty";
+			this->cobRoomty->Size = System::Drawing::Size(175, 21);
+			this->cobRoomty->TabIndex = 33;
 			// 
-			// Roomno
+			// cobRoomno
 			// 
-			this->Roomno->FormattingEnabled = true;
-			this->Roomno->Items->AddRange(gcnew cli::array< System::Object^  >(50) {
-				L"001", L"002", L"003", L"004", L"005", L"006", L"007",
-					L"008", L"009", L"010", L"011", L"012", L"013", L"014", L"015", L"016", L"017", L"018", L"019", L"020", L"021", L"022", L"023",
-					L"024", L"025", L"026", L"027", L"028", L"029", L"030", L"031", L"032", L"033", L"034", L"035", L"036", L"037", L"038", L"039",
-					L"040", L"041", L"042", L"043", L"044", L"045", L"046", L"047", L"048", L"049", L"050"
+			this->cobRoomno->FormattingEnabled = true;
+			this->cobRoomno->Items->AddRange(gcnew cli::array< System::Object^  >(50) {
+				L"001", L"002", L"003", L"004", L"005", L"006",
+					L"007", L"008", L"009", L"010", L"011", L"012", L"013", L"014", L"015", L"016", L"017", L"018", L"019", L"020", L"021", L"022",
+					L"023", L"024", L"025", L"026", L"027", L"028", L"029", L"030", L"031", L"032", L"033", L"034", L"035", L"036", L"037", L"038",
+					L"039", L"040", L"041", L"042", L"043", L"044", L"045", L"046", L"047", L"048", L"049", L"050"
 			});
-			this->Roomno->Location = System::Drawing::Point(140, 412);
-			this->Roomno->Name = L"Roomno";
-			this->Roomno->Size = System::Drawing::Size(162, 21);
-			this->Roomno->TabIndex = 34;
+			this->cobRoomno->Location = System::Drawing::Point(140, 412);
+			this->cobRoomno->Name = L"cobRoomno";
+			this->cobRoomno->Size = System::Drawing::Size(162, 21);
+			this->cobRoomno->TabIndex = 34;
 			// 
 			// label13
 			// 
@@ -761,24 +760,32 @@ private: System::Windows::Forms::Label^ lblDate;
 			// 
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm::timer1_Tick);
 			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Location = System::Drawing::Point(127, 227);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(175, 20);
+			this->dateTimePicker1->TabIndex = 39;
+			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &MyForm::dateTimePicker1_ValueChanged);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1270, 749);
+			this->Controls->Add(this->dateTimePicker1);
 			this->Controls->Add(this->label16);
 			this->Controls->Add(this->label15);
 			this->Controls->Add(this->label14);
 			this->Controls->Add(this->label13);
-			this->Controls->Add(this->Roomno);
-			this->Controls->Add(this->Roomty);
-			this->Controls->Add(this->Meal);
-			this->Controls->Add(this->TypeofID);
+			this->Controls->Add(this->cobRoomno);
+			this->Controls->Add(this->cobRoomty);
+			this->Controls->Add(this->cobMeal);
+			this->Controls->Add(this->cobProve);
 			this->Controls->Add(this->dateTimePicker3);
 			this->Controls->Add(this->dateTimePicker2);
-			this->Controls->Add(this->Gender);
-			this->Controls->Add(this->Nationality);
-			this->Controls->Add(this->dateTimePicker1);
+			this->Controls->Add(this->cobGender);
+			this->Controls->Add(this->cobNationality);
 			this->Controls->Add(this->label12);
 			this->Controls->Add(this->label11);
 			this->Controls->Add(this->label10);
@@ -790,14 +797,14 @@ private: System::Windows::Forms::Label^ lblDate;
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->Email);
-			this->Controls->Add(this->Mobile);
-			this->Controls->Add(this->Postcode);
-			this->Controls->Add(this->Address);
-			this->Controls->Add(this->Surname);
-			this->Controls->Add(this->Firstname);
+			this->Controls->Add(this->txtEmail);
+			this->Controls->Add(this->txtMobile);
+			this->Controls->Add(this->txtPostcode);
+			this->Controls->Add(this->txtAddress);
+			this->Controls->Add(this->txtSurname);
+			this->Controls->Add(this->txtFirstname);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->CustomerID);
+			this->Controls->Add(this->txtCustomerID);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->dataGridView1);
 			this->Name = L"MyForm";
@@ -828,8 +835,6 @@ private: System::Windows::Forms::Label^ lblDate;
 	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -942,22 +947,17 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 		sqlConn->Open();
 		sqlCmd->Connection = sqlConn;
 
-		// Corrected SQL syntax: "INSERT INTO"
 		sqlCmd->CommandText = "INSERT INTO hoteldb (ID, Firstname, Surname, Address, Postcode, Mobile, Email, Nationality, DOB, Gender, Prove, DateIn, DateOut, Meal, Roomty, Roomno) " +
-			"VALUES ('" + CustomerID->Text + "','" + Firstname->Text + "','" +
-			Surname->Text + "','" + Address->Text + "','" + Postcode->Text + "','" +
-			Mobile->Text + "','" + Email->Text + "','" + Nationality->Text + "','" +
-			dateTimePicker1->Text + "','" + Gender->Text + "','" + TypeofID->Text + "','" +
-			dateTimePicker2->Text + "','" + dateTimePicker3->Text + "','" + Meal->Text + "','" +
-			Roomty->Text + "','" + Roomno->Text + "')";
+			"VALUES ('" + txtCustomerID->Text + "','" + txtFirstname->Text + "','" +
+			txtSurname->Text + "','" + txtAddress->Text + "','" + txtPostcode->Text + "','" +
+			txtMobile->Text + "','" + txtEmail->Text + "','" + cobNationality->Text + "','" +
+			dateTimePicker1->Text + "','" + cobGender->Text + "','" + cobProve->Text + "','" +
+			dateTimePicker2->Text + "','" + dateTimePicker3->Text + "','" + cobMeal->Text + "','" +
+			cobRoomty->Text + "','" + cobRoomno->Text + "')";
 
-		// Execute the command
+		
 		sqlCmd->ExecuteNonQuery();
-
-		// Close the connection
 		sqlConn->Close();
-
-		// Refresh the data grid view
 		HotelConnected();
 	}
 
@@ -965,12 +965,94 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	{
 		MessageBox::Show(ex->Message);
 
-		// Ensure the connection is closed in case of an error
 		if (sqlConn->State == System::Data::ConnectionState::Open)
 		{
 			sqlConn->Close();
 		}
 	}
+}
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		sqlConn->ConnectionString = "datasource = localhost;port = 3306;username=root;password = 504Bca73*; database = hoteldb";
+		sqlCmd->Connection = sqlConn;
+		try
+		{
+			String^ ID = txtCustomerID->Text;
+			String^ Firstname = txtFirstname->Text;
+			String^ Surname = txtSurname->Text;
+			String^ Address = txtAddress->Text;
+			String^ PostCode = txtPostcode->Text;
+			String^ Mobile = txtMobile->Text;
+			String^ Email = txtEmail->Text;
+			String^ Nationality = cobNationality->Text;
+			String^ DOB = dateTimePicker1->Text;
+			String^ Gender = cobGender->Text;
+			String^ Prove = cobProve->Text;
+			String^ DateIn = dateTimePicker2->Text;
+			String^ DateOut = dateTimePicker3->Text;
+			String^ Meal = cobMeal->Text;
+			String^ Roomtype = cobRoomty->Text;
+			String^ RoomNumber = cobRoomno->Text;
+
+			sqlCmd->CommandText = "update hoteldb set ID ='" + ID + "', Firstname ='" + Firstname + "', Surname='" + Surname +
+				"',  Address = '" + Address + "', PostCode = '" + PostCode + "', Mobile = '" + Mobile + "', Email = '" + Email + "', Nationality = '" + Nationality +
+				"',  DOB = '" + DOB + "', Gender = '" + Gender + "', DateIn = '" + DateIn + "', DateOut = '" + DateOut + "', Meal = '" + Meal +
+				"',  Roomty = '" + cobRoomty + "', Roomno = '" + cobRoomno + "' WHERE ID =" + ID +
+				"", sqlConn;
+
+
+			sqlConn->Open();
+			sqlRd = sqlCmd->ExecuteReader();
+			sqlConn->Close();
+			HotelConnected();
+
+		}
+
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+}
+private: System::Void Firstname_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void Address_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void DOB_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void txtMeal_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void dataGridView1_CellClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+
+	try
+	{
+		txtCustomerID->Text = dataGridView1->SelectedRows[0]->Cells[0]->Value->ToString();
+		txtFirstname->Text = dataGridView1->SelectedRows[0]->Cells[1]->Value->ToString();
+		txtSurname->Text = dataGridView1->SelectedRows[0]->Cells[2]->Value->ToString();
+		txtAddress->Text = dataGridView1->SelectedRows[0]->Cells[3]->Value->ToString();
+		txtPostcode->Text = dataGridView1->SelectedRows[0]->Cells[4]->Value->ToString();
+		txtMobile->Text = dataGridView1->SelectedRows[0]->Cells[5]->Value->ToString();
+		txtEmail->Text = dataGridView1->SelectedRows[0]->Cells[6]->Value->ToString();
+		cobNationality->Text = dataGridView1->SelectedRows[0]->Cells[7]->Value->ToString();
+		dateTimePicker1->Text = dataGridView1->SelectedRows[0]->Cells[8]->Value->ToString();
+		cobGender->Text = dataGridView1->SelectedRows[0]->Cells[9]->Value->ToString();
+		cobProve->Text = dataGridView1->SelectedRows[0]->Cells[10]->Value->ToString();
+		dateTimePicker2->Text = dataGridView1->SelectedRows[0]->Cells[11]->Value->ToString();
+		dateTimePicker3->Text = dataGridView1->SelectedRows[0]->Cells[12]->Value->ToString();
+		cobMeal->Text = dataGridView1->SelectedRows[0]->Cells[13]->Value->ToString();
+		cobRoomty->Text = dataGridView1->SelectedRows[0]->Cells[14]->Value->ToString();
+		cobRoomno->Text = dataGridView1->SelectedRows[0]->Cells[15]->Value->ToString();
+
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+}
+private: System::Void textBox12_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
